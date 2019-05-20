@@ -3,7 +3,7 @@ let lockHashchange = false;
 let router = function () {
     if (lockHashchange) return false;
     let postPattern = /(apartment\/-[a-zA-Z0-9-_]{5,})/gm,
-        expected = ["", "index", "profile", "create","apartament", postPattern, "login"],
+        expected = ["", "index", "profile", "reg","login", postPattern, "login"],
         hash = window.location.hash.replace("#", "") || "index",
         name = 'index',
         proceed = false,

@@ -430,29 +430,7 @@
         request.send(null)
     }
 })();
-EJS.Helpers.prototype.date_tag = function (C, O, A) {
-    if (!(O instanceof Date)) {
-        O = new Date()
-    }
-    var B = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var G = [], D = [], P = [];
-    var J = O.getFullYear();
-    var H = O.getMonth();
-    var N = O.getDate();
-    for (var M = J - 15; M < J + 15; M++) {
-        G.push({value: M, text: M})
-    }
-    for (var E = 0; E < 12; E++) {
-        D.push({value: (E), text: B[E]})
-    }
-    for (var I = 0; I < 31; I++) {
-        P.push({value: (I + 1), text: (I + 1)})
-    }
-    var L = this.select_tag(C + "[year]", J, G, {id: C + "[year]"});
-    var F = this.select_tag(C + "[month]", H, D, {id: C + "[month]"});
-    var K = this.select_tag(C + "[day]", N, P, {id: C + "[day]"});
-    return L + F + K
-};
+
 EJS.Helpers.prototype.form_tag = function (B, A) {
     A = A || {};
     A.action = B;
