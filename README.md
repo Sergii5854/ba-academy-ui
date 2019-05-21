@@ -4,4 +4,4 @@
     
         JavaScript, Blockchain
         
-Link to view : [Have a look](https://sergii5854.github.io/ba-academy-ui/)
+Link to view : [Have a look](https://ba-academy-ui.netlify.com/#student)
