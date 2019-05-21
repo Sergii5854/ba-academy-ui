@@ -1,36 +1,36 @@
 <link href="/assets/css/registration.css" rel="stylesheet" type="text/css"/>
 
-<section class="container">
 
-    <div class="row ">
-        <div class="col-md-12 reg">
-
-                <h1 class="title">
-                    Registration
-                </h1>
+<section class=" reg">
 
 
-                <img alt="User" src="/assets/img/user.jpg"  class="avatar  avatar--reg">
+    <h1 class="title">
+        Registration
+    </h1>
 
-                <form class="form form--reg" method="POST" action="">
-                    <input name="login" type="text" class="form-control" placeholder="Login" required autofocus
-                           maxlength="20" minlength="3">
-                    <input name="password" type="password" class="form-control" placeholder="Password" required
-                           maxlength="20"
-                           minlength="4">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">
-                        Registration
-                    </button>
-                </form>
 
-            <a href="#login"  id="login" class="text-center text-white"> Login </a>
-        </div>
-    </div>
+    <img alt="User" src="/assets/img/user.jpg" class="avatar  avatar--reg">
+
+    <form class="form form--reg" method="POST" action="">
+        <input name="login" type="text" class="form-control" placeholder="Login" required autofocus
+               maxlength="20" minlength="3">
+        <input name="password" type="password" class="form-control" placeholder="Password" required
+               maxlength="20"
+               minlength="4">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+            Registration
+        </button>
+    </form>
+
+    <a href="#login" id="login" class="text-center text-white"> Login </a>
+
 </section>
 
-<ul class="dropdown-menu">
-    <li><a href="#apartament" id="apartament">My apartments</a></li>
-    <li><a href="#login" id="login ">My profile</a></li>
-    <li role="" class="divider"></li>
-    <li><a href="#" id="logout">Logout</a></li>
-</ul>
+
+<script>
+    (function ($) {
+        console.log("reg");
+
+
+    })(jQuery);
+</script>

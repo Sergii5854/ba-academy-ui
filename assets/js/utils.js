@@ -14,26 +14,18 @@ function excerpt(text, length) {
     return text
 }
 
+function pad2Digit(num) {
+    return ('0' + num.toString()).slice(-2)
+}
+
+function datetimeFormat(timestamp) {
+    let date = new Date(timestamp),
+        months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${date.getDate()} ${months[date.getMonth()]} ${pad2Digit(date.getFullYear())} ${pad2Digit(date.getHours())}:${pad2Digit(date.getMinutes())}`
+}
+
 function template(name) {
+    console.log('template ', "/templates/" + name + ".ejs");
     return new EJS({url: "/templates/" + name + ".ejs"})
 }
 
-let listData = {
-    entryTemplate: template('entry'),
-    entriesWrapper: false,
-    newItems: false
-};
-
-function renderEntries(r) {
-    listData.newItems = true;
-    r.forEach(renderEntry)
-}
-
-function renderEntry(item) {
-    if (!listData.newItems) return;
-    let template = listData.entryTemplate.render({item: new EntryEntity(item)});
-    if (listData.entriesWrapper.find(">div:first-child").length > 0)
-        $(template).insertBefore(listData.entriesWrapper.find(">div:first-child"));
-    else
-        listData.entriesWrapper.append(template)
-}
